@@ -1,9 +1,233 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello, World!</title>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Neural Point Cloud Diffusion for Disentangled 3D Shape and Appearance Generation.">
+  <meta name="keywords" content="Neural Point Cloud Diffusion, Disentangled, 3D Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neural Point Cloud Diffusion for Disentangled 3D Shape and Appearance Generation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.gif">
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- <script src="./static/js/bulma-carousel.min.js"></script> -->
+  <!-- <script src="./static/js/bulma-slider.min.js"></script> -->
+  <!-- <script src="./static/js/index.js"></script> -->
 </head>
 <body>
-    <h1>Hello, World!</h1>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Neural Point Cloud Diffusion for Disentangled 3D Shape and Appearance Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://pschroeppel.github.io">Philipp Schröppel</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://geometric-rl.mpi-inf.mpg.de/people/Wewer.html">Christopher Wewer</a><sup>2</sup>,</span>
+              <span class="author-block">
+              <a href="https://janericlenssen.github.io">Jan Eric Lenssen</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://cvmp.cs.uni-saarland.de/people/#eddy-ilg">Eddy Ilg</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://lmb.informatik.uni-freiburg.de/people/brox/">Thomas Brox</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Freiburg,</span>
+            <span class="author-block"><sup>2</sup>Max Planck Institute for Informatics,</span>
+            <span class="author-block"><sup>3</sup>Saarland University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2312.14124.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.14124"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. 
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>-->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/lmb-freiburg/neural-point-cloud-diffusion"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Controllable generation of 3D assets is important for many practical applications
+            like content creation in movies, games and engineering, as well as in AR/VR.
+            Recently, diffusion models have shown remarkable results in generation quality of 3D objects. 
+            However, none of the existing models enable disentangled generation to control the shape and 
+            appearance separately. 
+          </p>
+          <p>
+            For the first time, we present a suitable representation for 3D diffusion models 
+            to enable such disentanglement by introducing a hybrid point cloud and neural radiance field 
+            approach. We model a diffusion process over point positions jointly with a 
+            high-dimensional feature space for a local density and radiance decoder. 
+            While the point positions represent the coarse shape of the object, the point features 
+            allow modeling the geometry and appearance details. 
+            This disentanglement enables us to sample both independently and therefore to control both 
+            separately. 
+          </p>
+          <p>
+            Our approach sets a new state of the art in generation compared to previous 
+            disentanglement-capable methods by reduced FID scores of 30-90% and is on-par 
+            with other non disentanglement-capable state-of-the art methods. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- coming soon. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Project page coming soon!</h2>
+      </div>
+    </div>
+    <!--/ coming soon. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">BibTeX</h2>
+      </div>
+    </div>
+    <pre><code>@inproceedings{SchroeppelCVPR2024,
+  Title = {Neural Point Cloud Diffusion for Disentangled 3D Shape and Appearance Generation},
+  Author = {Philipp Schr\"oppel and Christopher Wewer and Jan Eric Lenssen and Eddy Ilg and Thomas Brox},
+  Booktitle = {CVPR},
+  Year = {2024}
+}</code></pre>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Acknowledgements. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Acknowledgements</h2>
+        <div class="content has-text-justified">
+          <p>
+            The research leading to these results was funded by the Deutsche
+            Forschungsgemeinschaft (DFG, German Research Foundation) under the
+            project numbers 401269959 and 417962828.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Acknowledgements. -->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2312.14124.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/lmb-freiburg/neural-point-cloud-diffusion" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The template for this website comes from <a
+              href="https://nerfies.github.io">Nerfies</a>. Thanks for open-sourcing!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
